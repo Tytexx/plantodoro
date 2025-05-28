@@ -6,7 +6,7 @@ export default function Header() {
   return (
     
     <nav className="flex items-center justify-around">
-      <div className="flex items-center gap-2 text-[2rem]">
+      <div className="flex items-center gap-2 text-[2rem] mt-5">
         <RiPlantLine className="text-sm text-black" />
         <h1>Plantodoro</h1>
       </div>
