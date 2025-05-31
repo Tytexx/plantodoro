@@ -8,18 +8,16 @@ export default function page() {
   const [shortBreak, setShortBreak] = useState(5);
   const [longBreak, setLongBreak] = useState(10);
 
-  const [seconds, setSeconds] = useState(0);
 
   const [stage, setStage] = useState(0);
 
   const [isRunning, setIsRunning] = useState(true);
 
   const switchStage = (index) => {
-    clearInterval(intervalRef.current);
     setIsRunning(false);
     setStage(index);
     setSecondsPassed(0);
-    setStage(getTickingName());
+    
   };
 
   const getTickingName = () => {
@@ -71,6 +69,8 @@ export default function page() {
           switchStage={switchStage}
           getTickingName={getTickingName}
           secondsPassed={secondsPassed}
+          isRunning={isRunning}
+          setIsRunning={setIsRunning}
         />
       </div>
     </div>
