@@ -46,7 +46,9 @@ export default function ({
       </div>
       <button
         className=" px-16 py-2 text-2xl bg-white/50 rounded-[8px] cursor-pointer"
-        onClick={() => setIsRunning(!isRunning)}
+        onClick={() => {
+          setIsRunning(!isRunning)
+        }}
       >
         {isRunning? "Stop" : "Start"}
       </button>

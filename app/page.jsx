@@ -8,7 +8,6 @@ export default function page() {
   const [shortBreak, setShortBreak] = useState(5);
   const [longBreak, setLongBreak] = useState(10);
 
-
   const [stage, setStage] = useState(0);
 
   const [isRunning, setIsRunning] = useState(true);
@@ -16,8 +15,15 @@ export default function page() {
   const switchStage = (index) => {
     setIsRunning(false);
     setStage(index);
+    switch (index) {
+      case 0:
+        setPomodoro(25);
+      case 1:
+        setShortBreak(5);
+      case 2:
+        setLongBreak(10);
+    }
     setSecondsPassed(0);
-    
   };
 
   const getTickingName = () => {
@@ -52,16 +58,27 @@ export default function page() {
   }, [stage, isRunning]);
 
   useEffect(() => {
-    if (secondsPassed <= 0) {
-      setPomodoro((prev) => {
-        return prev - 1;
-      });
-      setSecondsPassed(59);
+    if (secondsPassed < 0) {
+      switch (stage) {
+        case 0:
+          setPomodoro((prev) => {
+            return prev - 1;
+          });
+        case 1:
+          setShortBreak((prev) => {
+            return prev - 1;
+          });
+        case 2:
+          setLongBreak((prev) => {
+            return prev - 1;
+          });
+          setSecondsPassed(59);
+      }
     }
   }, [secondsPassed]);
 
   return (
-    <div className="bg-cyan-700  min-h-screen font-extralight">
+    <div className="bg-blue-400  min-h-screen font-extralight">
       <div className="max-w-6xl min-h-screen mx-auto">
         <Navigation />
         <Timer
