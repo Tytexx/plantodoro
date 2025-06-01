@@ -30,7 +30,7 @@ export default function ({
                 key === stage
                   ? "bg-neutral-50/50 rounded-[5px] font-mono"
                   : "bg-neutral-50/20  rounded-[5px] font-mono"
-              } p-1 cursor-pointer transition-all hover:bg-white/10`}
+              } p-1 cursor-pointer transition-all hover:bg-white/10 hover:scale-105`}
               onClick={() => switchStage(key)}
             >
               {option}
@@ -45,7 +45,7 @@ export default function ({
         </h1>
       </div>
       <button
-        className=" px-16 py-2 text-2xl mb-20 bg-white/50 rounded-[8px] cursor-pointer font-mono"
+        className=" px-16 py-2 text-2xl mb-20 bg-white/50 rounded-[8px] cursor-pointer font-mono transition-all hover:scale-105"
         onClick={() => {
           setIsRunning(!isRunning)
         }}
