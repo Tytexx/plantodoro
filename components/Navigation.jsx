@@ -8,19 +8,19 @@ export default function Header() {
     <nav className="flex items-center justify-around">
       <div className="flex items-center gap-2 text-[2rem] mt-5">
         <RiPlantLine className="text-sm text-black" />
-        <h1>Plantodoro</h1>
+        <h1 className="font-mono">Plantodoro</h1>
       </div>
 
       <div className="settings flex items-center gap-3">
         
         <div className="flex items-center gap-2 cursor-pointer text-[1rem]">
           <DiAptana className="text-sm text-black" />
-          <h1>Settings</h1>
+          <h1 className="font-mono">Settings</h1>
         </div>
 
         <div className="flex items-center gap-2 cursor-pointer text-[1rem]">
           <DiAptana className="text-sm text-black" />
-          <h1>Log In</h1>
+          <h1 className="font-mono">Log In</h1>
         </div>
 
       </div>

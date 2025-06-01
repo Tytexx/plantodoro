@@ -2,6 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Timer from "@/components/Timer";
+import Modal from "@/components/Modal";
+import Settings from "@/components/Settings";
 
 export default function page() {
   const [pomodoro, setPomodoro] = useState(25);
@@ -36,7 +38,7 @@ export default function page() {
     return timeStage[stage];
   };
 
-  const [secondsPassed, setSecondsPassed] = useState(59);
+  const [secondsPassed, setSecondsPassed] = useState(0);
 
   const intervalRef = useRef(null);
 
@@ -78,17 +80,23 @@ export default function page() {
   }, [secondsPassed]);
 
   return (
-    <div className="bg-blue-400  min-h-screen font-extralight">
-      <div className="max-w-6xl min-h-screen mx-auto">
-        <Navigation />
-        <Timer
-          stage={stage}
-          switchStage={switchStage}
-          getTickingName={getTickingName}
-          secondsPassed={secondsPassed}
-          isRunning={isRunning}
-          setIsRunning={setIsRunning}
-        />
+    <div>
+      <div className="bg-blue-400 min-h-screen font-extralight">
+        <div className="max-w-6xl min-h-screen mx-auto">
+          <Navigation />
+          {/* <Modal /> */}
+          <Timer
+            stage={stage}
+            switchStage={switchStage}
+            getTickingName={getTickingName}
+            secondsPassed={secondsPassed}
+            isRunning={isRunning}
+            setIsRunning={setIsRunning}
+          />
+        </div>
+      </div>
+      <div className="">
+        <Settings />
       </div>
     </div>
   );
