@@ -11,6 +11,7 @@ export default function page() {
   const [longBreak, setLongBreak] = useState(10);
 
   const [stage, setStage] = useState(0);
+  const [modalOn, setModalOn] = useState(false);
 
   const [isRunning, setIsRunning] = useState(true);
 
@@ -81,12 +82,15 @@ export default function page() {
 
   return (
     <div>
-      <div className="bg-amber-900 min-h-screen font-extralight relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/cafe-6.png')] bg-cover bg-no-repeat bg-bottom pointer-events-none z-0" />
+      <div className="bg-[url('/images/background-1.gif')]  min-h-screen font-extralight relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/cafe-8.png')] bg-cover bg-no-repeat bg-bottom pointer-events-none z-0" />
 
         <div className="max-w-6xl min-h-screen relative  mx-auto z-10">
           <Navigation />
-          {/* <Modal /> */}
+          <Modal modalOn={modalOn}>
+            Hey wassup
+          </Modal>
+
           <Timer
             stage={stage}
             switchStage={switchStage}
@@ -97,8 +101,7 @@ export default function page() {
           />
         </div>
       </div>
-      <div className="">
-      </div>
+      <div className=""></div>
     </div>
   );
 }
