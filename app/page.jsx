@@ -98,7 +98,6 @@ export default function page() {
         </div>
       </div>
       <div className="">
-        <Settings />
       </div>
     </div>
   );

@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+15&family=Jersey+25&display=swap');
+
+.font-amaranth {
+  font-family: 'Amaranth', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-jersey15 {
+  font-family: 'Jersey 15', cursive;
+}
+
+.font-jersey25 {
+  font-family: 'Jersey 25', cursive;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
