@@ -4,7 +4,7 @@ export default function Settings() {
     const [change, setChange ] = useState(true)
     
   return (
-    <div className="bg-sky-200 h-200">
+    <div className="bg-[url('/images/back-3.png')] bg-cover bg-no-repeat h-200">
       <div className="items-center flex flex-col gap-6">
         <h1 className="text-black mt-10 font-mono text-[2rem] ">Settings</h1>
         <h2 className="text-black m-10 font-mono text-[1.5rem] ">Timer Settings</h2>

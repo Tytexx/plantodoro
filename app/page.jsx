@@ -81,8 +81,10 @@ export default function page() {
 
   return (
     <div>
-      <div className="bg-blue-400 min-h-screen font-extralight">
-        <div className="max-w-6xl min-h-screen mx-auto">
+      <div className="bg-amber-900 min-h-screen font-extralight relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/cafe-6.png')] bg-cover bg-no-repeat bg-bottom pointer-events-none z-0" />
+
+        <div className="max-w-6xl min-h-screen relative  mx-auto z-10">
           <Navigation />
           {/* <Modal /> */}
           <Timer
