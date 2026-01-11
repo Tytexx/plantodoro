@@ -88,7 +88,6 @@ export default function page() {
         <div className="max-w-6xl min-h-screen relative  mx-auto z-10">
           <Navigation />
           <Modal modalOn={modalOn}>
-            Hey wassup
           </Modal>
 
           <Timer
