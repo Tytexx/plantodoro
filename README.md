@@ -3,6 +3,9 @@
 Plantodoro is a minimalist focus timer inspired by Pomofocus.  
 Work in short, focused intervals using the Pomodoro Technique.  
 
+![Plantodoro Screenshot](./showcase/pomodoro_1.png)
+
+
 ---
 
 ## Features
